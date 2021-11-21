@@ -1,10 +1,11 @@
-import React from 'react';
-import './App.css';
-import Container from './components/container/Container;'
-
+import React from "react";
+import "./App.css";
+import Container from "./components/container/Container";
 function App() {
   return (
-    <Container />
+    <div>
+      <Container />
+    </div>
   );
 }
 
