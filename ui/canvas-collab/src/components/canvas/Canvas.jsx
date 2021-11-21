@@ -1,15 +1,14 @@
-import React from 'react';
+import React from "react";
+import "./style.css";
 
-class Canvas extends React.Component{
-    constructor(props){
-        super(props);
-    } 
+class Canvas extends React.Component {
+  // constructor(props){
+  //     super(props);
+  // }
 
-    render() {
-        return (
-            <h1>Hello World</h1>
-        )
-    }
-} 
+  render() {
+    return <canvas className="whiteBoard" id="whiteBoard"></canvas>;
+  }
+}
 
-export default Canvas
+export default Canvas;
