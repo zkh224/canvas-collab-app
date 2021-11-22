@@ -10,13 +10,21 @@ class Container extends React.Component {
   render() {
     return (
       <div className="container">
-        <div className="color-picker">
-          <input type="color" />
-        </div>
-
         <div class="canvas-container">
           <Canvas></Canvas>
         </div>
+
+        <center className="tools">
+          <div className="color-picker">
+            <label htmlFor="penColor">Color Picker</label>
+            <input type="color" id="penColor" />
+          </div>
+
+          <div className="pen-width">
+            <label htmlFor="lineWidth">Pen Width</label>
+            <input type="range" min="1" max="10" value="2" />
+          </div>
+        </center>
       </div>
     );
   }
