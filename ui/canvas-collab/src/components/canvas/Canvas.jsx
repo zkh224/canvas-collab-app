@@ -1,16 +1,32 @@
 import React from "react";
-//import io from 'socket.io-client';
+import io from 'socket.io-client';
 
 import "./style.css";
 
 class Board extends React.Component {
+
+  timeout;
+  socket = io.connect("http://localhost:3000");
+
+
+
   ctx;
   isDrawing = false;
 
-  //   constructor(props) {
-  //     super(props);
+    constructor(props) {
+      super(props);
 
-  //   }
+        this.socket.on("canvas-data", function(data){
+          var image = new Image();
+          var canvas = document.querySelector('#canvas');
+          var ctx = canvas.getContext('2d');
+          image.onload = function() {
+              ctx.drawImage(image, 0, 0);
+          };
+          image.src = data;
+        })
+
+     }
 
   componentDidMount() {
     this.drawOnCanvas();
@@ -76,6 +92,13 @@ class Board extends React.Component {
       ctx.lineTo(mouse.x, mouse.y);
       ctx.closePath();
       ctx.stroke();
+
+      if(root.timeout !== undefined) clearTimeout(root.timeout);
+      root.timeout = setTimeout(function(){
+          var base64ImageData = canvas.toDataURL("image/png");
+          root.socket.emit("canvas-data", base64ImageData);
+      }, 1000)
+
     };
   }
 
