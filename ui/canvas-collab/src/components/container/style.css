@@ -9,6 +9,9 @@
   margin-top: 5px;
   margin-right: 10px;
   text-align: center;
+  border: 1px solid #828282;
+  border-radius: 8px;
+  padding: 2px;
 }
 
 .canvas-container {
@@ -25,8 +28,30 @@
   justify-content: center;
   align-items: center;
   margin-top: 5px;
+  /* border: 1px solid #828282;
+  box-sizing: border-box; */
+  box-shadow: 0px 2px 3px rgba(51, 51, 51, 0.2);
+  border-radius: 8px;
+  padding-bottom: 5px;
 }
 
 .pen-width {
   margin-top: 5px;
+  margin-right: 10px;
+  border: 1px solid #828282;
+  border-radius: 8px;
+  padding: 2px;
+}
+
+.eraser {
+  border: 1px solid #828282;
+  border-radius: 8px;
+  padding: 2px;
+}
+
+.btn-eraser {
+  border: 1px solid #828282;
+  border-radius: 8px;
+  padding: 2px;
+  /* border: none; */
 }

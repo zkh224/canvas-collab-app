@@ -1,32 +1,36 @@
 import React from "react";
-import io from 'socket.io-client';
+import io from "socket.io-client";
 
 import "./style.css";
 
-class Board extends React.Component {
-
+class Canvas extends React.Component {
   timeout;
-  socket = io.connect("http://localhost:5000");
-
-
+  socket = io.connect("http://localhost:3000");
 
   ctx;
   isDrawing = false;
 
-    constructor(props) {
-      super(props);
+  constructor(props) {
+    super(props);
 
-        this.socket.on("canvas-data", function(data){
-          var image = new Image();
-          var canvas = document.querySelector('#canvas');
-          var ctx = canvas.getContext('2d');
-          image.onload = function() {
-              ctx.drawImage(image, 0, 0);
-          };
-          image.src = data;
-        })
+    this.socket.on("canvas-data", function (data) {
+      var root = this;
+      var interval = setInterval(function () {
+        if (root.isDrawing) return;
+        root.isDrawing = true;
+        clearInterval(interval);
+        var image = new Image();
+        var canvas = document.querySelector("#canvas");
+        var ctx = canvas.getContext("2d");
+        image.onload = function () {
+          ctx.drawImage(image, 0, 0);
 
-     }
+          root.isDrawing = false;
+        };
+        image.src = data;
+      }, 200);
+    });
+  }
 
   componentDidMount() {
     this.drawOnCanvas();
@@ -93,22 +97,21 @@ class Board extends React.Component {
       ctx.closePath();
       ctx.stroke();
 
-      if(root.timeout !== undefined) clearTimeout(root.timeout);
-      root.timeout = setTimeout(function(){
-          var base64ImageData = canvas.toDataURL("image/png");
-          root.socket.emit("canvas-data", base64ImageData);
-      }, 1000)
-
+      if (root.timeout !== undefined) clearTimeout(root.timeout);
+      root.timeout = setTimeout(function () {
+        var base64ImageData = canvas.toDataURL("image/png");
+        root.socket.emit("canvas-data", base64ImageData);
+      }, 1000);
     };
   }
 
   render() {
     return (
-      <div class="draw" id="draw">
+      <div className="draw" id="draw">
         <canvas className="canvas" id="canvas"></canvas>
       </div>
     );
   }
 }
 
-export default Board;
+export default Canvas;
