@@ -1,35 +1,14 @@
-// const express = require("express");
-// const app = express();
-
-// const http = require("http");
-// const server = http.createServer(app);
-
-// const socket = require("socket.io");
-// const io = socket(server);
-
-// io.on("connection", onConnection);
-
-// function onConnection(socket) {
-//   socket.on("canvas-data", (data) =>
-//     socket.broadcast.emit("canvas-data", data)
-//   );
-// }
-
-// const port = 8080;
-// server.listen(port, () => console.log(`server is running on port ${port}`));
-
 // ----------------------------------
-
-// var app = require("express")();
+// var cors = require("cors");
+var express = require("express");
 var app = express();
-var server = app.listen(3000);
-var io = require("socket.io").listen(server);
-// var http = require("http").Server(app);
-// var io = require("socket.io")(http);
-var cors = require("cors");
-app.use(cors());
-
-// app.use(cors({ credentials: true }));
+// app.use(cors());
+var server = app.listen(4000);
+var io = require("socket.io")(server, {
+  cors: {
+    origin: "*",
+  },
+});
 
 io.on("connection", (socket) => {
   console.log("User Online");
