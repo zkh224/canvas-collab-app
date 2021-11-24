@@ -1,5 +1,8 @@
 import React from "react";
 import Canvas from "../canvas/Canvas";
+
+import { FaEraser } from "react-icons/fa";
+
 import "./style.css";
 
 class Container extends React.Component {
@@ -23,12 +26,18 @@ class Container extends React.Component {
     });
   }
 
+  changeEraser() {
+    this.setState({
+      color: "#ffffff",
+    });
+  }
+
   render() {
     return (
       <div className="container">
         <center className="tools">
           <div className="color-picker">
-            <label htmlFor="penColor">Color Picker</label>
+            <label htmlFor="penColor">Color Picker </label>
             <input
               type="color"
               id="penColor"
@@ -38,7 +47,7 @@ class Container extends React.Component {
           </div>
 
           <div className="pen-width">
-            <label htmlFor="lineWidth">Pen Size</label>
+            <label htmlFor="lineWidth">Pen Size </label>
             <input
               type="range"
               min="1"
@@ -47,9 +56,31 @@ class Container extends React.Component {
               onChange={this.changeSize.bind(this)}
             />
           </div>
+          {/* <Eraser
+            // onChange={this.changeEraser.bind(this)}
+            handleEraser={this.changeEraser.bind(this)}
+          /> */}
+
+          <div className="eraser">
+            {/* <FontAwesomeIcon
+    title="erase"
+    icon={FaEraser}
+    className="fa-icon"
+    value={this.state.eraser}
+    onClick={this.handleEraser.bind(this)}
+  /> */}
+            <label htmlFor="eraser">Eraser </label>
+            <button
+              type="button"
+              className="btn-eraser"
+              onClick={this.changeEraser.bind(this)}
+            >
+              <FaEraser />
+            </button>
+          </div>
         </center>
 
-        <div class="canvas-container">
+        <div className="canvas-container">
           <Canvas color={this.state.color} size={this.state.size}></Canvas>
         </div>
       </div>
