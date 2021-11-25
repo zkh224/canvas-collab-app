@@ -10,7 +10,7 @@ class Container extends React.Component {
     super(props);
     this.state = {
       color: "#000000",
-      size: "5",
+      size: "10",
     };
   }
 
@@ -54,7 +54,7 @@ class Container extends React.Component {
               <input
                 type="range"
                 min="1"
-                max="40"
+                max="80"
                 value={this.state.size}
                 onChange={this.changeSize.bind(this)}
               />
