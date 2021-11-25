@@ -23,8 +23,10 @@ A collaborative whiteboard app - A space where users can come together remotely,
 
 
 ### Dependencies & Libraries
-* item 1
-* item 2
+* React.js
+* Socket.io
+* NodeJS Express
+* CORS
 
 ### Code Snippets
 ```js
