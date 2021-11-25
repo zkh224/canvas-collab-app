@@ -1,58 +1,50 @@
-# Project Title
+# Canvas Collab
+[![canvaslogo.png](https://i.postimg.cc/jj2WhcM5/canvaslogo.png)](https://postimg.cc/67s5WrJJ)
+#### A tool for users to draw and collab remotely.
 
-Simple overview of use/purpose.
+## About the project
 
-## Description
+A collaborative whiteboard app - A space where users can come together remotely, to express themselves, explain ideas, brainstorm, teach, collaborate on solutions and more. The goal of the app is to have easy interaction for non-technical users. It can be accessed anywhere and used by anyone either for work, education or just to create. Does not require account setup or download. 
 
-An in-depth paragraph about your project and overview of use.
+## App Objectives
 
-## Getting Started
+* Quick access and navigation.
+* No login or download required.
+* Ability to share with users to participate on the same board.
+* Whiteboard has easy access to tools, such as: Brushes, eraser, colors, size, new/clear board.
+* Mobile responsive.
 
-### Dependencies
+## Demo
+[![landing.jpg](https://i.postimg.cc/8zM2FgRB/landing.jpg)](https://postimg.cc/pmVG771p)
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
+### [Check out Canvas Collab](https://welcometocanvascollab.netlify.app/) 
 
-### Installing
+[![small-board](https://i.postimg.cc/KzHqq078/small-wb2.png)](https://postimg.cc/5Y8Sjqkh)
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
 
-### Executing program
+### Dependencies & Libraries
+* item 1
+* item 2
 
-* How to run the program
-* Step-by-step bullets
-```
-code blocks for commands
-```
-
-## Help
-
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
+### Code Snippets
+```js
+*add code
 ```
 
-## Authors
+## Our Team
 
-Contributors names and contact info
+Zahra Khan - Frontend Developer
+* [LinkedIn](https://www.linkedin.com/in/zahrakhan-2021/) 
+* [Portfolio](https://zahrakhan.netlify.app/) 
+* [GitHub](https://github.com/zkh224) 
 
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
+Dare Oloruntoba - Frontend Developer
+* [LinkedIn](https://www.linkedin.com/in/zahrakhan-2021/) 
+* [GitHub](https://github.com/zkh224) 
 
-## Version History
+Naomy Portillo - UX/UI Designer
+* [LinkedIn](https://www.linkedin.com/in/naomyportillo/) 
+* [Portfolio](https://naomyportillo.me/) 
+* [GitHub](https://github.com/rosannaNaomy) 
 
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
-* 0.1
-    * Initial Release
 
-## Acknowledgments
-
-Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
