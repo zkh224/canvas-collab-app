@@ -28,10 +28,44 @@ A collaborative whiteboard app - A space where users can come together remotely,
 * NodeJS Express
 * CORS
 
-### Code Snippets
+### Setting Up on Local Environment
+1. Clone or download the repository in your computer. 
+2. In the terminal go to the server folder first with 
 ```js
-*add code
+$ cd server
 ```
+2. In the server folder, install the following dependancies  
+```js
+$ npm install
+```
+```js
+$ npm install express --save
+```
+```js
+$ npm install socket.io
+```
+```js
+$ npm i cors
+```
+
+3. Go back to the root folder with 
+```js
+$ cd ..
+```
+and then
+```js
+$ cd ui
+```
+4. In the ui folder, install the dependacies first with
+```js
+$ npm install
+```
+
+5. Then install socket.io client in the same folder. 
+```js
+$ npm i socket.io-client
+```
+6. 
 
 ## Our Team
 
