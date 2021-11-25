@@ -65,7 +65,27 @@ $ npm install
 ```js
 $ npm i socket.io-client
 ```
-6. 
+6. Go to canvas-collab-app/ui/src/components/canvas/Canvas.jsx file and on line 8, `socket = io.connect("https://warm-caverns-86005.herokuapp.com/");`, replace `https://warm-caverns-86005.herokuapp.com/` with your localhost URL. 
+
+7. Go back to the ui folder, and `npm start`.
+8. While the React app is running, go back to the root folder with 
+```js
+$ cd ..
+```
+and 
+
+go to the server folder
+```js
+$ cd server
+```
+
+9. On the server folder, run the node server with 
+```js
+$ node server.js
+```
+10.Now the multi-user functionality worked by testing the same app on two different browsers! 
+
+
 
 ## Our Team
 
