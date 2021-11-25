@@ -5,7 +5,7 @@ import "./style.css";
 
 class Canvas extends React.Component {
   timeout;
-  socket = io.connect("http://localhost:4000");
+  socket = io.connect("https://warm-caverns-86005.herokuapp.com/");
 
   ctx;
   isDrawing = false;
