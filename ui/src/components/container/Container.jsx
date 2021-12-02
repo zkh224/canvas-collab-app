@@ -39,7 +39,7 @@ class Container extends React.Component {
 //        context.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
 //    }
     
-    handleClick = () => {
+    clearCanvas = () => {
     var canvas = document.getElementById('canvas'),
     ctx = canvas.getContext("2d");
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -54,7 +54,6 @@ class Container extends React.Component {
           <div className="tools">
 
                 <div className="color-picker">
-                  {/* <label htmlFor="penColor">Color Picker </label> */}
                   <input
                     type="color"
                     id="penColor"
@@ -64,7 +63,6 @@ class Container extends React.Component {
                 </div>
 
                 <div className="pen-width">
-                  {/* <label htmlFor="lineWidth">Pen Size </label> */}
                   <input
                     type="range"
                     min="1"
@@ -73,22 +71,12 @@ class Container extends React.Component {
                     onChange={this.changeSize.bind(this)}
                   />
                 </div>
-                {/* <Eraser
-                  // onChange={this.changeEraser.bind(this)}
-                  handleEraser={this.changeEraser.bind(this)}
-                /> */}
+
 
                 <div className="eraser">
-                  {/* <FontAwesomeIcon
-          title="erase"
-          icon={FaEraser}
-          className="fa-icon"
-          value={this.state.eraser}
-          onClick={this.handleEraser.bind(this)}
-        /> */}
                   <button
                     type="button"
-                    className="btn-eraser"
+                    className="btn-icon"
                     onClick={this.changeEraser.bind(this)}
                   >
                     <FaEraser size={28} />
@@ -98,8 +86,8 @@ class Container extends React.Component {
                   <div className="eraser">
                   <button
                     type="button"
-                    className="btn-eraser"
-                    onClick={this.handleClick}
+                    className="btn-icon"
+                    onClick={this.clearCanvas}
                   >
                     <FaRegTrashAlt size={28} />
                   </button>
