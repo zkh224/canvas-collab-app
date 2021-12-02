@@ -20,6 +20,7 @@ class Canvas extends React.Component {
         root.isDrawing = true;
         clearInterval(interval);
         var image = new Image();
+          
         var canvas = document.querySelector("#canvas");
         var ctx = canvas.getContext("2d");
         image.onload = function () {
@@ -88,8 +89,10 @@ class Canvas extends React.Component {
       },
       false
     );
-
-    // Set up touch events for mobile, etc
+      
+      
+    //FOR TOUCHSCREEN DEVICES
+    // Set up touch events for mobile and tablet
     canvas.addEventListener(
       "touchstart",
       function (e) {
@@ -123,7 +126,8 @@ class Canvas extends React.Component {
       },
       false
     );
-
+      
+      
     // Get the position of a touch relative to the canvas
     function getTouchPos(canvasDom, touchEvent) {
       var rect = canvasDom.getBoundingClientRect();
@@ -162,7 +166,10 @@ class Canvas extends React.Component {
       false
     );
 
+      //Set the variable for converting the base64
     var root = this;
+      
+    //  Drawing on canvas with mouse cordination
     var onPaint = function () {
       ctx.beginPath();
       ctx.moveTo(last_mouse.x, last_mouse.y);
@@ -170,6 +177,7 @@ class Canvas extends React.Component {
       ctx.closePath();
       ctx.stroke();
 
+    //convert to base64 string to store in storage for a certain time and reduce data
       if (root.timeout !== undefined) clearTimeout(root.timeout);
       root.timeout = setTimeout(function () {
         var base64ImageData = canvas.toDataURL("image/png");
@@ -177,6 +185,12 @@ class Canvas extends React.Component {
       }, 1000);
     };
   }
+
+clearCanvas() {
+    var canvas=document.getElementById("canvas");
+    var context=canvas.getContext("2d");
+    context.clearRect(0,0,canvas.width,canvas.height);
+}
 
   render() {
     return (
