@@ -23,13 +23,69 @@ A collaborative whiteboard app - A space where users can come together remotely,
 
 
 ### Dependencies & Libraries
-* item 1
-* item 2
+* React.js
+* Socket.io
+* NodeJS Express
+* CORS
 
-### Code Snippets
+### Setting Up on Local Environment
+1. Clone or download the repository in your computer. 
+2. In the terminal go to the server folder first with 
 ```js
-*add code
+$ cd server
 ```
+2. In the server folder, install the following dependancies  
+```js
+$ npm install
+```
+```js
+$ npm install express --save
+```
+```js
+$ npm install socket.io
+```
+```js
+$ npm i cors
+```
+
+3. Go back to the root folder with 
+```js
+$ cd ..
+```
+and then
+```js
+$ cd ui
+```
+4. In the ui folder, install the dependacies first with
+```js
+$ npm install
+```
+
+5. Then install socket.io client in the same folder. 
+```js
+$ npm i socket.io-client
+```
+6. Go to canvas-collab-app/ui/src/components/canvas/Canvas.jsx file and on line 8, `socket = io.connect("https://warm-caverns-86005.herokuapp.com/");`, replace `https://warm-caverns-86005.herokuapp.com/` with your localhost URL. 
+
+7. Go back to the ui folder, and `npm start`.
+8. While the React app is running, go back to the root folder with 
+```js
+$ cd ..
+```
+and 
+
+go to the server folder
+```js
+$ cd server
+```
+
+9. On the server folder, run the node server with 
+```js
+$ node server.js
+```
+10.Now the multi-user functionality worked by testing the same app on two different browsers! 
+
+
 
 ## Our Team
 
