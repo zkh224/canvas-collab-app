@@ -106,6 +106,7 @@ class Canvas extends React.Component {
       },
       false
     );
+      
     canvas.addEventListener(
       "touchend",
       function (e) {
@@ -114,6 +115,7 @@ class Canvas extends React.Component {
       },
       false
     );
+      
     canvas.addEventListener(
       "touchmove",
       function (e) {
@@ -143,10 +145,9 @@ class Canvas extends React.Component {
       function (e) {
         if (e.target === canvas) {
           e.preventDefault();
-            
         }
       },
-      { passive: false }
+      false
     );
     document.body.addEventListener(
       "touchend",
@@ -155,7 +156,7 @@ class Canvas extends React.Component {
           e.preventDefault();
         }
       },
-      { passive: false }
+      false
     );
     document.body.addEventListener(
       "touchmove",
@@ -164,7 +165,7 @@ class Canvas extends React.Component {
           e.preventDefault();
         }
       },
-      { passive: false }
+      false
     );
 
       //Set the variable for converting the base64
