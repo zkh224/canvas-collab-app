@@ -93,42 +93,30 @@ class Canvas extends React.Component {
       
     //FOR TOUCHSCREEN DEVICES
     //Set up touch events for mobile and tablet
-    canvas.addEventListener(
-      "touchstart",
-      function (e) {
+    canvas.addEventListener("touchstart", function (e) {
         mouse = getTouchPos(canvas, e);
         var touch = e.touches[0];
         var mouseEvent = new MouseEvent("mousedown", {
-          clientX: touch.clientX,
-          clientY: touch.clientY,
-        });
-        canvas.dispatchEvent(mouseEvent);
-      },
-      false
-    );
+            clientX: touch.clientX,
+            clientY: touch.clientY
+          });
+          canvas.dispatchEvent(mouseEvent);
+        }, false);
       
-    canvas.addEventListener(
-      "touchend",
-      function (e) {
-        var mouseEvent = new MouseEvent("mouseup", {});
-        canvas.dispatchEvent(mouseEvent);
-      },
-      false
-    );
+    canvas.addEventListener("touchend", function (e) {
+      var mouseEvent = new MouseEvent("mouseup", {});
+      canvas.dispatchEvent(mouseEvent);
+    }, false);
       
-    canvas.addEventListener(
-      "touchmove",
-      function (e) {
-        var touch = e.touches[0];
-        var mouseEvent = new MouseEvent("mousemove", {
-          clientX: touch.clientX,
-          clientY: touch.clientY,
-        });
-        canvas.dispatchEvent(mouseEvent);
-      },
-      false
-    );
-      
+    canvas.addEventListener("touchmove", function (e) {
+      var touch = e.touches[0];
+      var mouseEvent = new MouseEvent("mousemove", {
+        clientX: touch.clientX,
+        clientY: touch.clientY
+      });
+      canvas.dispatchEvent(mouseEvent);
+    }, false);
+
       
      //Get the position of a touch relative to the canvas
     function getTouchPos(canvasDom, touchEvent) {
