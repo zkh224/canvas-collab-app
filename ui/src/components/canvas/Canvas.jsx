@@ -137,6 +137,7 @@ class Canvas extends React.Component {
       },
       false
     );
+      
     document.body.addEventListener(
       "touchend",
       function (e) {
