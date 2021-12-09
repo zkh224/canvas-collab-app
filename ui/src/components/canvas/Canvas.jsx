@@ -92,11 +92,11 @@ class Canvas extends React.Component {
       
       
     //FOR TOUCHSCREEN DEVICES
-    // Set up touch events for mobile and tablet
+    //Set up touch events for mobile and tablet
     canvas.addEventListener(
       "touchstart",
       function (e) {
-        //mouse = getTouchPos(canvas, e);
+        mouse = getTouchPos(canvas, e);
         var touch = e.touches[0];
         var mouseEvent = new MouseEvent("mousedown", {
           clientX: touch.clientX,
@@ -130,14 +130,14 @@ class Canvas extends React.Component {
     );
       
       
-    // Get the position of a touch relative to the canvas
-//    function getTouchPos(canvasDom, touchEvent) {
-//      var rect = canvasDom.getBoundingClientRect();
-//      return {
-//        x: touchEvent.touches[0].clientX,
-//        y: touchEvent.touches[0].clientY,
-//      };
-//    }
+     //Get the position of a touch relative to the canvas
+    function getTouchPos(canvasDom, touchEvent) {
+      var rect = canvasDom.getBoundingClientRect();
+      return {
+        x: touchEvent.touches[0].clientX,
+        y: touchEvent.touches[0].clientY,
+      };
+    }
 
     // Prevent scrolling when touching the canvas
     document.body.addEventListener(
