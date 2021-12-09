@@ -141,7 +141,7 @@ class Canvas extends React.Component {
     document.body.addEventListener(
       "touchstart",
       function (e) {
-        if (e.target == canvas) {
+        if (e.target === canvas) {
           e.preventDefault();
             
         }
@@ -151,7 +151,7 @@ class Canvas extends React.Component {
     document.body.addEventListener(
       "touchend",
       function (e) {
-        if (e.target == canvas) {
+        if (e.target === canvas) {
           e.preventDefault();
         }
       },
@@ -160,7 +160,7 @@ class Canvas extends React.Component {
     document.body.addEventListener(
       "touchmove",
       function (e) {
-        if (e.target == canvas) {
+        if (e.target === canvas) {
           e.preventDefault();
         }
       },
