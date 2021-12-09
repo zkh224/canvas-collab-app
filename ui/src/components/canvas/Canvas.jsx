@@ -132,8 +132,8 @@ class Canvas extends React.Component {
     function getTouchPos(canvasDom, touchEvent) {
       var rect = canvasDom.getBoundingClientRect();
       return {
-        x: touchEvent.touches[0].clientX - rect.left,
-        y: touchEvent.touches[0].clientY - rect.top,
+        x: touchEvent.touches[0].clientX,
+        y: touchEvent.touches[0].clientY,
       };
     }
 
