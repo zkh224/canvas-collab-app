@@ -60,17 +60,33 @@ input[type="color"]::-webkit-color-swatch {
 @media (max-width: 600px) {
     .container {
         flex-direction: column;
+        margin: auto;
+    }
+    
+    .leftcol {
+        margin: 0;
     }
 
     .tools {
         display: inline-flex;
         flex-direction: row;
         width: auto;
+        gap: 0;
         padding: 1em;
+    }
+    
+    .pen-width {
+        padding: 0 10px;
     }
 
     input[type="range"] {
         -webkit-appearance: slider-horizontal;
+        width:80px;
+    }
+    
+    input[type="color"] {
+        width: 30px;
+        height: 30px;
     }
     
     .logo {

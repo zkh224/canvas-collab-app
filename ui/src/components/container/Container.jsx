@@ -83,7 +83,7 @@ class Container extends React.Component {
                   </button>
                 </div>
 
-                  <div className="eraser">
+                  <div className="clear">
                   <button
                     type="button"
                     className="btn-icon"
