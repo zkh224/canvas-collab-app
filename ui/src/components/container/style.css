@@ -73,7 +73,7 @@ input[type="color"]::-webkit-color-swatch {
         width: 100vw;
         gap: 0;
         padding: 1em;
-        justify-content: space-around;
+        justify-content: space-evenly;
     }
     
    
