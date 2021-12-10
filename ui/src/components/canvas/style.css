@@ -8,3 +8,10 @@
   height: 100vh;
   background-color: white;
 }
+
+/* MOBILE VIEW  */
+@media (max-width: 600px) {
+    .draw {
+
+    }
+}

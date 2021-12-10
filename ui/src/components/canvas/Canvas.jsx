@@ -126,36 +126,13 @@ class Canvas extends React.Component {
         y: touchEvent.touches[0].clientY,
       };
     }
-
-    // Prevent scrolling when touching the canvas
-    document.body.addEventListener(
-      "touchstart",
-      function (e) {
-        if (e.target === canvas) {
-          e.preventDefault();
-        }
-      },
-      false
-    );
       
-    document.body.addEventListener(
-      "touchend",
-      function (e) {
-        if (e.target === canvas) {
-          e.preventDefault();
-        }
-      },
-      false
-    );
-    document.body.addEventListener(
-      "touchmove",
-      function (e) {
-        if (e.target === canvas) {
-          e.preventDefault();
-        }
-      },
-      false
-    );
+    //Prevent scrolling in touchscreen devices
+    canvas.addEventListener('touchstart', function(e) {e.preventDefault()}, false);
+    canvas.addEventListener('touchmove', function(e) {e.preventDefault()}, false);
+    canvas.addEventListener('touchend', function(e) {e.preventDefault()}, false);
+    canvas.addEventListener('touchcancel', function(e) {e.preventDefault()}, false);
+
 
       //Set the variable for converting the base64
     var root = this;

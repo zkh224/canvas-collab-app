@@ -1,56 +1,79 @@
 .container {
-  display: flex;
+    display: flex;
+    flex-direction: row;
 }
 
 .leftcol {
-  width: 80px;
-  margin-left: 1em;
+    width: 80px;
+    margin-left: 1em;
 }
 
 .logo {
-  display: block;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  font-weight: 700;
-  text-align: center;
-  text-transform: uppercase;
+    display: block;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 input[type="range"] {
-  -webkit-appearance: slider-vertical;
+    -webkit-appearance: slider-vertical;
 }
 
 input[type="color"] {
-  width: 40px;
-  height: 40px;
-  border: 1px solid #d1d1d1;
-  border-radius: 40px;
-  background: none;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #d1d1d1;
+    border-radius: 40px;
+    background: none;
 }
+
 input[type="color"]::-webkit-color-swatch-wrapper {
-  padding: 0;
+    padding: 0;
 }
+
 input[type="color"]::-webkit-color-swatch {
-  border: none;
-  border-radius: 40px;
+    border: none;
+    border-radius: 40px;
 }
 
 .btn-icon {
-  border: none;
-  background-color: white;
+    border: none;
+    background-color: white;
 }
 
 .tools {
-  display: inline-flex;
-  gap: 2rem;
-  padding-top: 2em;
-  padding-bottom: 2em;
-  background-color: #ffffff;
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  width: 5rem;
-  filter: drop-shadow(4px 2px 3px rgba(0, 0, 0, 0.25));
-  z-index: 0;
+    display: inline-flex;
+    gap: 2rem;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    background-color: #ffffff;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 5rem;
+    filter: drop-shadow(4px 2px 3px rgba(0, 0, 0, 0.25));
+    z-index: 0;
+}
+
+/* MOBILE VIEW  */
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .tools {
+        display: inline-flex;
+        flex-direction: row;
+        width: auto;
+        padding: 1em;
+    }
+
+    input[type="range"] {
+        -webkit-appearance: slider-horizontal;
+    }
+    
+    .logo {
+        display: none;
+    }
 }
