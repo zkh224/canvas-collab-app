@@ -50,7 +50,9 @@ class Container extends React.Component {
     return (
       <div className="container">
         <div className="leftcol">
+          <a href="https://welcometocanvascollab.netlify.app/">
           <img src="logoCC.png" alt="logo" style={{width: 72, height: 72, padding: 5, marginTop: 10}}/>
+          </a>
           <div className="tools">
 
                 <div className="color-picker">
