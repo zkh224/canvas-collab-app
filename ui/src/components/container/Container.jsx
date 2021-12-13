@@ -50,7 +50,7 @@ class Container extends React.Component {
     return (
       <div className="container">
         <div className="leftcol">
-          <h1 className="logo">Canvas Collab</h1>
+          <img src="logoCC.png" alt="logo" style={{width: 72, height: 72, padding: 5, marginTop: 10}}/>
           <div className="tools">
 
                 <div className="color-picker">
