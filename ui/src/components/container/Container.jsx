@@ -79,7 +79,7 @@ class Container extends React.Component {
                     className="btn-icon"
                     onClick={this.changeEraser.bind(this)}
                   >
-                    <FaEraser size={28} />
+                    <FaEraser size={28} className="icon" />
                   </button>
                 </div>
 
@@ -89,7 +89,7 @@ class Container extends React.Component {
                     className="btn-icon"
                     onClick={this.clearCanvas}
                   >
-                    <FaRegTrashAlt size={28} />
+                    <FaRegTrashAlt size={28} className="icon" />
                   </button>
                 </div>
               
