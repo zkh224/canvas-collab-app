@@ -8,12 +8,12 @@
     margin-left: 1em;
 }
 
-.logo {
+.logo img {
     display: block;
-    font-size: 1.125rem;
-    font-weight: 700;
-    text-align: center;
-    text-transform: uppercase;
+    width: 72px;
+    height: 72px;
+    padding: 5px;
+    margin-top: auto;
 }
 
 input[type="range"] {

@@ -39,6 +39,8 @@ class Container extends React.Component {
 //        context.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
 //    }
     
+//style={{width: 72, height: 72, padding: 5, marginTop: 10}}
+    
     clearCanvas = () => {
     var canvas = document.getElementById('canvas'),
     ctx = canvas.getContext("2d");
@@ -50,9 +52,12 @@ class Container extends React.Component {
     return (
       <div className="container">
         <div className="leftcol">
-        <a href="https://welcometocanvascollab.netlify.app/">
-          <img src="logoCC.png" alt="logo" style={{width: 72, height: 72, padding: 5, marginTop: 10}}/>
-          </a>
+            <div className="logo">
+                <a href="https://welcometocanvascollab.netlify.app/">
+                <img src="logoCC.png" alt="logo" />
+                </a>
+            </div>
+        
 
           <div className="tools">
 
