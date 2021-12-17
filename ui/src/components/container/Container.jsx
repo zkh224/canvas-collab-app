@@ -3,6 +3,7 @@ import Canvas from "../canvas/Canvas";
 
 import { FaEraser } from "react-icons/fa";
 import { FaRegTrashAlt } from "react-icons/fa";
+import { CirclePicker  } from 'react-color';
 
 import "./style.css";
 
@@ -12,8 +13,14 @@ class Container extends React.Component {
     this.state = {
       color: "#000000",
       size: "10",
+      colors: ["#ff0000", "#0080ff", "#02b802", "#ff00ff", '#9100fa', '#ffaa07', "#570000", "#000000"]
     };
   }
+    
+    
+  handleSwitchColor = (color) => {
+        this.setState({color: color.hex});
+    };
 
   changeColor(params) {
     this.setState({
@@ -33,13 +40,6 @@ class Container extends React.Component {
     });
   }
     
-//    changeClearCanvas() {
-//        var canvas = document.querySelector("#canvas");
-//    this.ctx = canvas.getContext("2d");
-//        context.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-//    }
-    
-//style={{width: 72, height: 72, padding: 5, marginTop: 10}}
     
     clearCanvas = () => {
     var canvas = document.getElementById('canvas'),
@@ -68,13 +68,17 @@ class Container extends React.Component {
                     value={this.state.color}
                     onChange={this.changeColor.bind(this)}
                   />
+                    
+                    <div className="display-picker">
+                        <CirclePicker  onChangeComplete={this.handleSwitchColor} colors={ this.state.colors } width='100px' />
+                    </div>  
                 </div>
 
                 <div className="pen-width">
                   <input
                     type="range"
-                    min="1"
-                    max="80"
+                    min="5"
+                    max="100"
                     value={this.state.size}
                     onChange={this.changeSize.bind(this)}
                   />
